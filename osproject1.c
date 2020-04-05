@@ -25,35 +25,26 @@ x = x / n;
 return x;
 }
 
-void rearrange_process_queue(int pq[],int rt[],int pty[],int n,int running_processes)
-{
-int i;
-if(pty[0]<pty[1])
-{
-int temp = pq[0];
-for(i=0;i<running_processes;i++)
 
-{
-pq[i] = pq[i+1];
-}
-pq[running_processes-1] = temp;
-
-}
-if(rt[pq[0]-1]==0)
-{
-int temp = pq[0];
-for(i=0;i<running_processes;i++)
-{
-pq[i] = pq[i+1];
-
-}
-pq[running_processes-1] = temp;
-running_processes=running_processes-1;
-}
 
  
 }
+void minptyinc(int pty[],int n)
+{
+int i,min=pty[0];
+for(i=1;i<n;i++)
+{
+if(min>=pty[i])
+min=pty[i];
+}
+for(i=0;i<n;i++)
+{
+if(pty[i]==min)
+pty[i]++;
 
+}
+
+}
 int main()
 {
 int count,i,j;
