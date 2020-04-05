@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<conio.h>
+//#include<conio.h>
 #include<stdlib.h>
 float avg_wait_time(int wt[], int n)
 {
@@ -74,7 +74,7 @@ pflag[j] = 0;
 for(count=0;count<n;count++)
 {
 
-printf("\nEnter Detail for Process = %d",count+1); printf("\nEnter Arrival time = "); scanf("%d",&at[count]);
+//printf("\nEnter Detail for Process = %d",count+1); printf("\nEnter Arrival time = "); scanf("%d",&at[count]);
 printf("Enter Burst time = ");
 scanf("%d",&bt[count]);
 printf("Enter Priority = ");
@@ -152,7 +152,7 @@ printf("|\tProcess\t|\tAT\t|\tBT\t| Priority |\tTAT\t|\tWT\t|\n"); for(i=0;i<n;i
 printf("|\t%d\t|\t%d\t|\t%d\t|\t%d\t|\t%d\t|\t%d\t|\n",i+1,at[i],bt[i],pty1[i],tat[i],wt[i]);
 }
 
-printf("\n\nAverage Waiting Time= %f\n",avg_wait_time(wt,n)); printf("Avg Turnaround Time = %f\n",avg_turnaround_time(tat,n));
+//printf("\n\nAverage Waiting Time= %f\n",avg_wait_time(wt,n)); printf("Avg Turnaround Time = %f\n",avg_turnaround_time(tat,n));
 
 return 0;
 }
