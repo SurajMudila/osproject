@@ -120,7 +120,7 @@ int current = 0;
 int running_processes = 0;
 int x=0;
 pq[0] = 1;
-
+running_processes = 1;
 pflag[0] = 1;
 int flag = 0;
 
@@ -140,7 +140,7 @@ else
 {
 
 time = time + rt[pq[0]-1];
-
+rt[pq[0]-1] = 0;
 flag = 1;
 current = time;
 tat[pq[0]-1] = time - at[pq[0]-1];
